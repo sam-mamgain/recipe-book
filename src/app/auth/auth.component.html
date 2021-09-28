@@ -6,7 +6,7 @@
     <!-- <div *ngIf="errorMsg" class="alert alert-danger">
       <p>{{ errorMsg }}</p>
     </div> -->
-    <app-alert [message]="errorMsg" *ngIf="errorMsg"></app-alert>
+    <app-alert [message]="errorMsg" *ngIf="errorMsg" (close)="onHandleError()"></app-alert>
     <form *ngIf="!isLoading" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
       <div class="form-group">
         <label for="email">Email</label>
