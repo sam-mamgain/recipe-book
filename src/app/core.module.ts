@@ -4,6 +4,7 @@ import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { AuthInterceptorService } from "./auth/auth-interceptor.service";
 import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { LoggingService } from "./logging.service";
 
 @NgModule({
   providers: [
@@ -14,6 +15,7 @@ import { HTTP_INTERCEPTORS } from "@angular/common/http";
       useClass: AuthInterceptorService,
       multi: true,
     },
+    // LoggingService // 3rd way of providing the service
   ],
 })
 export class CoreModule {}
